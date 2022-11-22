@@ -2,10 +2,21 @@ import cv2
 from PIL import Image
 
 img = cv2.imread("win.png")
-print(img[1][2])
 
-cv2.imwrite("pxwin.png",img[1][2])
+def showImage():
+    pixel = Image.open("pxwin.png")
+    pixel.show()
 
-pixel = Image.open("pxwin.png")
+def writePixel(height:int, width:int=None):
+    if num2:
+        cv2.imwrite("pxwin.png",img[height][width])
+        showImage()
+        return height, width
+    else:
+        cv2.imwrite("pxwin.png",img[height])
+        showImage()
+        return height
 
-pixel.show()
+
+
+print(img[writePixel(1,2)])
