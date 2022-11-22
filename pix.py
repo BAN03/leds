@@ -25,6 +25,9 @@ def writePixel(height:int, width:int=None):
 img_to_leds = np.ndarray((16, 16, 3), dtype = int)
 print(img_to_leds)
 
+for i in range(16):
+    for j in range(16):
+        img_to_leds[i,j] = img[i,j]
 """
 img_to_leds = [[[0,0,0] for i in range(16)] for i in range(16)]
 print(type(img), type(img_to_leds))
@@ -34,6 +37,6 @@ print(img[6:8, 3])
 img[5, 5] = [14, 201, 25]
 #img[6:8] = [[ran(),ran(),ran()] for i in range(16)]
 img[6:8, 3] = [[25, 67, 240],[83, 94, 0]]
+"""
 cv2.imwrite("pxwin.png",img_to_leds)
 showImage()
-"""
