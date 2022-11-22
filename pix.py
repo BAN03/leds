@@ -1,7 +1,7 @@
 import cv2
 from PIL import Image
 
-img = cv2.imread("win.png")
+img = cv2.imread("win.png",3)
 
 def showImage():
     pixel = Image.open("pxwin.png")
@@ -19,4 +19,7 @@ def writePixel(height:int, width:int=None):
 
 
 
-print(img[writePixel(1,2)])
+#print(img[writePixel(1,2)])
+print(img[5][5])
+cv2.imwrite("pxwin.png",img)
+showImage()
