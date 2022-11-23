@@ -22,7 +22,7 @@ def writePixel(height:int, width:int=None):
         showImage()
         return height
 
-img_to_leds = np.ndarray((16, 16, 3), dtype = int)
+img_to_leds = np.zeros((16, 16, 3), dtype = int)
 print(img_to_leds)
 
 for i in range(16):
