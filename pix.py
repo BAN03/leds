@@ -24,7 +24,7 @@ def writePixel(height:int, width:int=None):
 
 img_to_leds = np.zeros((16, 16, 3), dtype = int)
 print(img_to_leds)
-x,y,z = img[0,4]
+x,y,z = img[5,5]
 for i in range(16):
     for j in range(16):
         img_to_leds[i,j] = img[i,j]
