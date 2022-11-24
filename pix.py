@@ -1,6 +1,6 @@
+import random
 import cv2
 from PIL import Image
-import random
 import numpy as np
 
 img = cv2.imread("win.png",3)
@@ -13,7 +13,7 @@ def showImage():
     pixel.show()
 
 def writePixel(height:int, width:int=None):
-    if num2:
+    if width:
         cv2.imwrite("pxwin.png",img[height, width])
         showImage()
         return height, width
